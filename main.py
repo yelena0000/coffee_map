@@ -72,7 +72,7 @@ def main():
     your_location = input('Где вы находитесь? ')
     your_coords = fetch_coordinates(apikey, your_location)
 
-    with open("coffee.json", "r") as coffee_file:
+    with open("coffee.json", "r", encoding="cp1251") as coffee_file:
         coffee_file_contents = coffee_file.read()
         coffeeshops = json.loads(coffee_file_contents)
 
